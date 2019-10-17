@@ -5,17 +5,6 @@ import gql from 'graphql-tag';
 import { useParams } from 'react-router-dom';
 import Note from './Note';
 
-const QUERY_NOTES = gql`
-  {
-    notes {
-      id
-      text
-      title
-      date
-    }
-  }
-`;
-
 const QUERY_NOTE = gql`
   query Note($id: Int!) {
     note(id: $id) {
